@@ -6,7 +6,7 @@ WORKDIR /midifile
 RUN cmake -DCMAKE_C_COMPILER=afl-clang -DCMAKE_CXX_COMPILER=afl-clang++ .
 RUN make
 RUN mkdir /midcorpus
-ADD /testcase/* /midcorpus
+ADD /testcase/* /midcorpus/
 
 FROM fuzzers/afl:2.52
 
